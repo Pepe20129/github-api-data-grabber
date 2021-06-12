@@ -152,7 +152,8 @@ while True:
     print("1. Rate Limit")
     print("2. Repo Data")
     print("3. User Data")
-    print("4. Options")
+    print("4. Octocat")
+    print("5. Options")
     m = int(input(">"))
 
     if(m==1):
@@ -162,6 +163,8 @@ while True:
     if(m==3):
         getuserdata()
     if(m==4):
+        print(get(str("https://api.github.com/octocat"), auth=(optionsd["credentials"]["username"], optionsd["credentials"]["password"])).text)
+    if(m==5):
         options()
 
     print()
